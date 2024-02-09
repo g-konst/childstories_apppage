@@ -1,0 +1,39 @@
+---
+layout: default
+permalink: /
+title: App
+text-align: center
+---
+
+  <div class="row align-items-center">
+    <div class="col col-12 col-md-6 text-{{ page.text-align }}">
+        <img class="d-block mx-auto mb-2" src="./assets/text_childstories.png" alt="" width="128">
+        <h3>{{ site.title }}</h3>
+        <p class="lead py-2">{{ site.description }}.</p>
+        <div class="d-flex flex-row justify-content-center py-3">
+            {% if site.google_play_id %}
+            <a class="px-1" href='http://play.google.com/store/apps/details?id={{ site.google_play_id }}'>
+              <img alt='Доступно в Google Play' src='./assets/small_gplay.png' width="60"/></a>
+            {% endif %}
+            {% if site.galaxy_store_tag %}
+            <a class="px-1" href='https://galaxy.store/{{ site.galaxy_store_tag }}'>
+              <img alt='Доступно в Galaxy Store' src='./assets/small_galaxy_store.png' width="60"/></a>
+            {% endif %}
+            {% if site.rustore_tag %}
+            <a class="px-1" href='https://apps.rustore.ru/app/{{ site.rustore_tag }}'>
+              <img alt='Скачайте из RuStore' src='./assets/small_rustore.png' width="60"/></a>
+            {% endif %}
+            {% if site.huawei_store_link %}
+            <a class="px-1" href='https://url.cloud.huawei.com/{{ site.huawei_store_link }}?shareTo=qrcode'>
+              <img alt='Откройте в AppGallery' src='./assets/small_huawei.png' width="60"/></a>
+            {% endif %}
+            {% if site.apk_direct %}
+            <a class="px-1" href='./childstories.apk'>
+              <img alt='Откройте в AppGallery' src='./assets/small_apk_direct.png' width="60"/></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <img class="col col-12 col-md-6 mb-auto py-2" src="./assets/app_view_childstories.png" alt="" />
+
+  </div>

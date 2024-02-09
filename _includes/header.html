@@ -1,0 +1,9 @@
+<header class="mb-5 pb-3">
+  <div>
+    <nav class="nav nav-masthead justify-content-center">
+      {% for node in site.pages %}
+        <a class="nav-link {% if page.url == node.url %}active{% endif %}" href="{{ node.permalink | absolute_url }}">{{ node.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

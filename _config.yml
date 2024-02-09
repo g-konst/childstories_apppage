@@ -1,0 +1,36 @@
+lang: ru
+name: ChildStories
+title: Сказки для детей
+description: Откройте мир сказок для ваших детей
+link: https://blog.gkonst.net
+link_name: g-konst
+
+galaxy_store_tag: chldstory
+google_play_id: net.gkonst.childstories
+rustore_tag: net.gkonst.childstories
+huawei_store_link: p91ZdUVpMA
+apk_direct: true
+
+# google-adsense:
+google-analytics: G-FLMV4R6TYX
+
+yandex-ads: R-A-5560249-1
+
+contacts:
+  github: https://github.com/g-konst
+  # instagram: https://instagram.com/k_grudnitskiy
+  # twitter:
+  # pinterest:
+  # facebook:
+  # dribbble:
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
+include:
+  - _pages
+
+sass:
+  sass_dir: _sass
+  style: compressed

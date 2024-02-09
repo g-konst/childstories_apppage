@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ site.name }}</title>
+  <meta name='description' content='{% if site.description %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}'>
+  <link rel="canonical" href="{{ site.url | replace: 'index.html', '' | absolute_url }}">
+
+  <link href="{{ site.baseurl }}/assets/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="{{ site.baseurl }}/assets/logo.png" rel="shortcut icon" type="image/x-icon">
+
+  {% if site.google-adsense %}
+    {% include google-adsense.html %}
+  {% endif %}
+
+  {% if site.google-analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+
+  <style>
+  {% capture include_to_scssify %}
+    {% include main.scss %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+  </style>
+
+</head>

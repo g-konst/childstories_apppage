@@ -1,0 +1,32 @@
+---
+permalink: /ad-view
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad View</title>
+  <!-- Yandex.RTB -->
+  <script>window.yaContextCb=window.yaContextCb||[]</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
+  <style>
+    * {pointer-events: none;}
+    html, body {margin: 0; height: 100%; overflow: hidden; background-color: transparent;}
+    div {background-color: transparent; height: 100%}
+  </style>
+</head>
+<body>
+  <!-- Yandex.RTB -->
+  <div id="yandex_rtb_{{ site.yandex-ads }}"></div>
+  <script>
+  window.yaContextCb.push(()=>{
+      Ya.Context.AdvManager.render({
+          "blockId": "{{ site.yandex-ads }}",
+          "renderTo": "yandex_rtb_{{ site.yandex-ads }}"
+      })
+  })
+  </script>
+</body>
+</html>

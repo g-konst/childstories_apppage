@@ -1,0 +1,27 @@
+<div class="contact mx-auto">
+    <ul class="contact__list">
+      {% if site.contacts.github %}
+        <li><a href="{{ site.contacts.github }}"><i class="ion ion-logo-github"></i></a></li>
+      {% else %} {% endif %}
+
+      {% if site.contacts.twitter %}
+        <li><a href="{{ site.contacts.twitter }}"><i class="ion ion-logo-twitter"></i></a></li>
+      {% else %} {% endif %}
+
+      {% if site.contacts.facebook %}
+        <li><a href="{{ site.contacts.facebook }}"><i class="ion ion-logo-facebook"></i></a></li>
+      {% else %} {% endif %}
+
+      {% if site.contacts.dribbble %}
+        <li><a href="{{ site.contacts.dribbble }}"><i class="ion ion-logo-dribbble"></i></a></li>
+      {% else %} {% endif %}
+
+      {% if site.contacts.instagram %}
+        <li><a href="{{ site.contacts.instagram }}"><i class="ion ion-logo-instagram"></i></a></li>
+      {% else %} {% endif %}
+
+      {% if site.contacts.pinterest %}
+        <li><a href="{{ site.contacts.pinterest }}"><i class="ion ion-logo-pinterest"></i></a></li>
+      {% else %} {% endif %}
+    </ul>
+  </div>
